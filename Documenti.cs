@@ -20,23 +20,23 @@
 //effettuare dei prestiti registrando il periodo (Dal/Al) del prestito e il documento.
 //Deve essere possibile effettuare la ricerca dei prestiti dato nome e cognome di un cliente.
 
+//Utente utente1 = new("Bianchi", "Antonio", "bianchi@mail.it", "3321234567");
+//Utente utente2 = new Utente("Rossi", "Mario", "mario@mail.it", "4443234567");
+//Utente utente3 = new Utente("Verdi", "Luca", "verdi@mail.it", "5551334567");
 
-public class Utente
-{
-    public string Cognome { get; set; }
-    public string Nome { get; set; }
-    public string Email { get; set; }
+//List<Utente> tuttiGliUtenti = new List<Utente>();
+//tuttiGliUtenti.Add(utente1);
+//tuttiGliUtenti.Add(utente2);
+//tuttiGliUtenti.Add(utente3);
 
-    public int Recapito { get; set; }
+//foreach (Utente item in tuttiGliUtenti)
+//{
+//    {
 
-    public Utente(string cognome, string nome, string email, int recapito)
-    {
-        Cognome = cognome;
-        Nome = nome;
-        Email = email;
-        Recapito = recapito;
-    }
-}
+//    }
+
+//}
+
 
 public class Documenti
 {
@@ -45,37 +45,20 @@ public class Documenti
     public int Anno { get; set; }
     public string Settore { get; set; }
 
-    public bool Stato { get; set; }
+    public bool Disponibile { get; set; }
 
     public string Scaffale { get; set; }
 
     public string Autore { get; set; }
 
-    public Documenti(string id, string titolo, int anno, string settore, bool stato, string scaffale, string autore)
+    public Documenti(string id, string titolo, int anno, string settore, bool disponibile, string scaffale, string autore)
     {
         Id = id;
         Titolo = titolo;
         Anno = anno;
         Settore = settore;
-        Stato = stato;
+        Disponibile = true;
         Scaffale = scaffale;
         Autore = autore;
-    }
-}
-
-public class Libri : Documenti
-{
-    public int Pagine { get; set; }
-    public Libri(string id, string titolo, int anno, string settore, bool stato, string scaffale, string autore) : base(id, titolo, anno, settore, stato, scaffale, autore)
-    {
-    }
-    
-}
-
-public class Dvd : Documenti
-{
-    public int Durata { get; set; }
-    public Dvd(string id, string titolo, int anno, string settore, bool stato, string scaffale, string autore) : base(id, titolo, anno, settore, stato, scaffale, autore)
-    {
     }
 }
