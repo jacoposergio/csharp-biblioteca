@@ -66,10 +66,16 @@ public class Documenti
 public class Libri : Documenti
 {
     public int Pagine { get; set; }
-    public Libri(string )
+    public Libri(string id, string titolo, int anno, string settore, bool stato, string scaffale, string autore) : base(id, titolo, anno, settore, stato, scaffale, autore)
+    {
+    }
+    
 }
 
 public class Dvd : Documenti
 {
     public int Durata { get; set; }
+    public Dvd(string id, string titolo, int anno, string settore, bool stato, string scaffale, string autore) : base(id, titolo, anno, settore, stato, scaffale, autore)
+    {
+    }
 }
