@@ -43,7 +43,8 @@
 public class Dvd : Documenti
 {
     public int Durata { get; set; }
-    public Dvd(string id, string titolo, int anno, string settore, bool disponibile, string scaffale, string autore) : base(id, titolo, anno, settore, disponibile, scaffale, autore)
+    public Dvd(string id, string titolo, int anno, string settore, bool disponibile, string scaffale, string autore, int durata) : base(id, titolo, anno, settore, disponibile, scaffale, autore)
     {
+        Durata = Durata;
     }
 }

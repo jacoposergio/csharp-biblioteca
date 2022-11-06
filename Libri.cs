@@ -41,11 +41,12 @@
 
 public class Libri : Documenti
 {
-    public Libri(string id, string titolo, int anno, string settore, bool disponibile, string scaffale, string autore) : base(id, titolo, anno, settore, disponibile, scaffale, autore)
+    public int Pagine { get; set; }
+    public Libri(string id, string titolo, int anno, string settore, bool disponibile, string scaffale, string autore, int pagine) : base(id, titolo, anno, settore, disponibile, scaffale, autore)
     {
+        Pagine = pagine;
     }
 
-    public int Pagine { get; set; }
  
     
 }
